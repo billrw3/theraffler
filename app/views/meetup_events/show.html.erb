@@ -45,6 +45,15 @@
     <% end %>
   </table>
 </p>
-
+<script>
+  var tableList = document.getElementById("userTable");
+  document.write(tableList.length);
+  
+  var newList = [];
+  newList = tableList.sort(function(a,b) { return (Math.rand()>0.5);});
+  
+  document.getElementById("userTable") = newList;
+  
+</script>
 <%= link_to 'Edit', edit_meetup_event_path(@meetup_event) %> |
 <%= link_to 'Back', meetup_events_path %>
